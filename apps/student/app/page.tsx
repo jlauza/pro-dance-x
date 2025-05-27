@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Button } from "@workspace/ui/components/button";
 import { Label } from "@workspace/ui/components/label";
 import { Input } from "@workspace/ui/components/input";
+import { FaGoogle } from "@workspace/ui/icons";
 
 export default function Page() {
   const [email, setEmail] = useState("");
@@ -17,7 +18,7 @@ export default function Page() {
     <div className="flex min-h-screen items-center justify-center bg-gray-100 dark:bg-gray-900">
       <div className="w-full max-w-sm space-y-6 rounded-xl bg-white p-8 shadow-md dark:bg-gray-800">
         <h2 className="text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Admin Account
+          Student Account
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -48,6 +49,31 @@ export default function Page() {
           <Button type="submit" className="w-full">
             Sign In
           </Button>
+
+          <div className="relative my-6">
+            <div
+              className="absolute inset-0 flex items-center"
+              aria-hidden="true"
+            >
+              <div className="w-full border-t border-gray-300 dark:border-gray-700" />
+            </div>
+            <div className="relative flex justify-center text-sm">
+              <span className="bg-white px-2 text-gray-500 dark:bg-gray-800 dark:text-gray-400">
+                Or continue with
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <Button
+              type="button"
+              variant="outline"
+              className="w-full flex items-center justify-center gap-2"
+            >
+              <FaGoogle className="text-lg" />
+              Sign in with Google
+            </Button>
+          </div>
         </form>
       </div>
     </div>
