@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Button } from "@workspace/ui/components/button";
 import { Label } from "@workspace/ui/components/label";
 import { Input } from "@workspace/ui/components/input";
+import { FaGoogle } from "react-icons/fa";
 
 export default function Page() {
   const [email, setEmail] = useState("");
@@ -44,10 +45,41 @@ export default function Page() {
               required
             />
           </div>
-
           <Button type="submit" className="w-full">
             Sign In
           </Button>
+
+          <div className="relative my-6">
+            <div
+              className="absolute inset-0 flex items-center"
+              aria-hidden="true"
+            >
+              <div className="w-full border-t border-gray-300 dark:border-gray-700" />
+            </div>
+            <div className="relative flex justify-center text-sm">
+              <span className="bg-white px-2 text-gray-500 dark:bg-gray-800 dark:text-gray-400">
+                Or continue with
+              </span>
+            </div>
+          </div>
+
+          <Button
+            type="button"
+            variant="outline"
+            className="w-full flex items-center justify-center gap-2"
+          >
+            <FaGoogle className="text-lg" />
+            Sign in with Google
+          </Button>
+
+          <div className="text-sm text-center mt-4">
+            <a
+              href="/forgot-password"
+              className="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300"
+            >
+              Forgot password?
+            </a>
+          </div>
         </form>
       </div>
     </div>
