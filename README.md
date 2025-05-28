@@ -49,7 +49,7 @@ export { MdHome } from "react-icons/md";
 
 Call in any component file to any monorepo app like so:
 
-```
+```tsx
 import { FaBeer } from "@workspace/ui/icons";
 
 export default function HomePage() {
