@@ -1,11 +1,8 @@
 import { Button } from "@workspace/ui/components/button";
 import Link from "next/link";
 
-const app_admin = process.env.NEXT_PUBLIC_APP_ONE_URL;
-const app_student = process.env.NEXT_PUBLIC_APP_TWO_URL;
-
-console.log("Admin URL:", app_admin);
-console.log("Student URL:", app_student);
+const app_manager = process.env.NEXT_PUBLIC_APP_MANAGER;
+const app_student = process.env.NEXT_PUBLIC_APP_STUDENT;
 
 export default function Page() {
   return (
@@ -13,9 +10,9 @@ export default function Page() {
       <div className="flex flex-col items-center justify-center gap-4">
         <h1 className="text-2xl font-bold">Welcome to Pro Dance X</h1>
         <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <Link href={app_admin!} passHref legacyBehavior>
+          <Link href={app_manager!} passHref legacyBehavior>
             <Button asChild variant="outline" className="m-2">
-              <a>Go to Admin Portal</a>
+              <a>Go to Manager Portal</a>
             </Button>
           </Link>
           <Link href={app_student!} passHref legacyBehavior>
